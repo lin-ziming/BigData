@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/A_NIO/A_NIO.iml" filepath="$PROJECT_DIR$/A_NIO/A_NIO.iml" />
       <module fileurl="file://$PROJECT_DIR$/B_JUC01/B_JUC01.iml" filepath="$PROJECT_DIR$/B_JUC01/B_JUC01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/B_JUC02/B_JUC02.iml" filepath="$PROJECT_DIR$/B_JUC02/B_JUC02.iml" />
       <module fileurl="file://$PROJECT_DIR$/BigData.iml" filepath="$PROJECT_DIR$/BigData.iml" />
     </modules>
   </component>
