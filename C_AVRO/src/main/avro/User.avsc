@@ -1,0 +1,15 @@
+// 需要在这个文件中指定AVRO的格式
+// 在指定的时候需要以json形式来指定
+{
+    "namespace":"cn.tedu.serial", // 等价于Java中的package
+    "type":"record", // record等价于Java中的class
+    "name":"User", // 定义类名
+    "fields":
+    [
+        {"name":"name","type":"string"}, // private String name;
+        {"name":"age","type":"int"}, // private int age;
+        {"name":"gender","type":"string"},
+        {"name":"height","type":"double"},
+        {"name":"weight","type":"double"} // 如果是最后一个属性，那么末尾不加逗号
+    ]
+}

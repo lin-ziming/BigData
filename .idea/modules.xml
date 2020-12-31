@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/B_JUC02/B_JUC02.iml" filepath="$PROJECT_DIR$/B_JUC02/B_JUC02.iml" />
       <module fileurl="file://$PROJECT_DIR$/B_JUC03/B_JUC03.iml" filepath="$PROJECT_DIR$/B_JUC03/B_JUC03.iml" />
       <module fileurl="file://$PROJECT_DIR$/BigData.iml" filepath="$PROJECT_DIR$/BigData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/C_AVRO/C_AVRO.iml" filepath="$PROJECT_DIR$/C_AVRO/C_AVRO.iml" />
     </modules>
   </component>
 </project>
