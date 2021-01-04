@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/C_AVRO/pom.xml" />
+        <option value="$PROJECT_DIR$/D_Zookeeper/pom.xml" />
       </list>
     </option>
   </component>
