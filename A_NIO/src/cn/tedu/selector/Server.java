@@ -24,7 +24,7 @@ public class Server {
         // 理论上而言，选择器最好是单例的
         Selector selector = SingleSelector.get();
         // 需要将服务器注册到选择器上
-        // 第二个参数表示要注册的时间，即需要选择器进行选择的事件
+        // 第二个参数表示要注册的事件，即需要选择器进行选择的事件
         ssc.register(selector, SelectionKey.OP_ACCEPT);
         // 实际开发中，服务器一旦开启就不会关闭
         while (true) {

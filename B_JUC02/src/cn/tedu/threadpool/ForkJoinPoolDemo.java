@@ -18,14 +18,14 @@ public class ForkJoinPoolDemo {
         // 线程在执行的时候，是分配到CPU核上来执行
         // 目前为止，几乎的计算机都是多核的
         // 一个线程只能分布到一个核上执行
-        // 43945
+        // 43945  家里电脑运行时间：24018
         // long sum = 0;
         // for (long i = 1; i <= 100000000000L; i++) {
         //     sum += i;
         // }
         // System.out.println(sum);
 
-        // 45242 -> 22s
+        // 45242 -> 22s  家里电脑运行时间：7940
         // 构建分叉合并池
         ForkJoinPool pool = new ForkJoinPool();
         // 执行任务
