@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/C_AVRO/pom.xml" />
         <option value="$PROJECT_DIR$/D_Zookeeper/pom.xml" />
+        <option value="$PROJECT_DIR$/E_HFS/pom.xml" />
+        <option value="$PROJECT_DIR$/E_HDFS/pom.xml" />
       </list>
     </option>
   </component>

@@ -6,13 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="D_Zookeeper" />
         <module name="C_AVRO" />
+        <module name="E_HDFS" />
+        <module name="D_Zookeeper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="C_AVRO" target="1.8" />
       <module name="D_Zookeeper" target="1.8" />
+      <module name="E_HDFS" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
