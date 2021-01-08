@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/D_Zookeeper/pom.xml" />
         <option value="$PROJECT_DIR$/E_HFS/pom.xml" />
         <option value="$PROJECT_DIR$/E_HDFS/pom.xml" />
+        <option value="$PROJECT_DIR$/F_MapReduce01/pom.xml" />
       </list>
     </option>
   </component>
