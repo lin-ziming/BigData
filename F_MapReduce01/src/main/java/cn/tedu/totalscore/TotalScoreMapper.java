@@ -13,7 +13,7 @@ import java.io.IOException;
 // VALUEIN - 输入的值的类型。如果不指定，则表示读取的一行数据
 // KEYOUT - 输出的键的类型。当前案例中，输出的键是字符
 // VALUEOUT - 输出的值的类型。当前案例中，输出的值是次数
-public class ScoreCountMapper
+public class TotalScoreMapper
         extends Mapper<LongWritable, Text, Text, IntWritable> {
 
 
@@ -23,8 +23,8 @@ public class ScoreCountMapper
     // context：环境参数。利用这个参数将结果写出到Reduce
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        // value表示一行数据，例如：hello
-        // 拿到一行数据之后，将一行数据中的字符拆分出来
+        // Bob 90
+        // 拆分字段
         String[] arr = value.toString().split(" ");
         context.write(new Text(arr[0]),new IntWritable(Integer.parseInt(arr[1])));
 

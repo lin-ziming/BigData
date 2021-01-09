@@ -2,6 +2,7 @@ package cn.tedu.maxscore;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -27,14 +28,13 @@ public class MaxScoreDriver {
         // 设置Reducer类
         job.setReducerClass(MaxScoreReducer.class);
 
-        // 设置Mapper的输出类型
+        // 如果Mapper和Reducer的输出类型一致，那么可以只设置一个
         job.setMapOutputKeyClass(Text.class);
-        job.setMapOutputValueClass(LongWritable.class);
-
+        job.setMapOutputValueClass(IntWritable.class);
 
         // 设置输入路径
         FileInputFormat.addInputPath(job,
-                new Path("hdfs://hadoop01:9000/txt/score2/"));
+                new Path("hdfs://hadoop01:9000/txt/score2.txt"));
         // 设置输出路径
         // 要求输出路径必须不存在
         FileOutputFormat.setOutputPath(job,

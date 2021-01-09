@@ -19,15 +19,12 @@ public class MaxScoreReducer
     // context：环境参数。可以利用这个参数将结果写出
     @Override
     protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
-        // 目的：获取每一个字符对应的次数
-        // key = 'a'
-        // values = {1, 1, 1, 1, 1...}
-        // 记录总次数
-        int sum = 0;
+
+        int max = 0;
         // 遍历values来求和
         for (IntWritable val : values) {
-            sum += val.get();
+            if (max < val.get()) max = val.get();
         }
-        context.write(key, new IntWritable(sum));
+        context.write(key, new IntWritable(max));
     }
 }

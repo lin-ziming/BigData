@@ -2,6 +2,7 @@ package cn.tedu.totalscore;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -11,7 +12,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import java.io.IOException;
 
 // 驱动类/入口类
-public class ScoreCountDriver {
+public class TotalScoreDriver {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
@@ -21,15 +22,15 @@ public class ScoreCountDriver {
         Job job = Job.getInstance(conf);
 
         // 设置入口类
-        job.setJarByClass(ScoreCountDriver.class);
+        job.setJarByClass(TotalScoreDriver.class);
         // 设置Mapper类
-        job.setMapperClass(ScoreCountMapper.class);
+        job.setMapperClass(TotalScoreMapper.class);
         // 设置Reducer类
-        job.setReducerClass(ScoreCountReducer.class);
+        job.setReducerClass(TotalScoreReducer.class);
 
-        // 设置Mapper的输出类型
+        // 如果Mapper和Reducer的输出类型一致，那么可以只设置一个
         job.setMapOutputKeyClass(Text.class);
-        job.setMapOutputValueClass(LongWritable.class);
+        job.setMapOutputValueClass(IntWritable.class);
 
 
         // 设置输入路径

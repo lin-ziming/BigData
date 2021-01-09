@@ -16,15 +16,14 @@ import java.io.IOException;
 public class MaxScoreMapper
         extends Mapper<LongWritable, Text, Text, IntWritable> {
 
-
     // MapTask的处理逻辑就是覆盖在这个方法中
     // key：键。行的字节偏移量
     // value：值。读取的一行数据
     // context：环境参数。利用这个参数将结果写出到Reduce
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        // value表示一行数据，例如：hello
-        // 拿到一行数据之后，将一行数据中的字符拆分出来
+        // Grace 543
+        // 拆分字段
         String[] arr = value.toString().split(" ");
         context.write(new Text(arr[0]),new IntWritable(Integer.parseInt(arr[1])));
 

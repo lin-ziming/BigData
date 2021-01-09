@@ -1,5 +1,6 @@
 package cn.tedu.wordcount;
 
+import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -13,9 +14,9 @@ import java.io.IOException;
 // KEYOUT - 输出的键的类型。当前案例中，输出的键是字符
 // VALUEOUT - 输出的值的类型。当前案例中，输出的值是次数
 public class WordCountMapper
-        extends Mapper<LongWritable, Text, Text, LongWritable> {
+        extends Mapper<LongWritable, Text, Text, IntWritable> {
 
-    private final LongWritable once = new LongWritable(1);
+    private final IntWritable once = new IntWritable(1);
 
     // MapTask的处理逻辑就是覆盖在这个方法中
     // key：键。行的字节偏移量
@@ -23,14 +24,12 @@ public class WordCountMapper
     // context：环境参数。利用这个参数将结果写出到Reduce
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        // value表示一行数据，例如：hello
-        // 拿到一行数据之后，将一行数据中的字符拆分出来
-        String[] cs = value.toString().split(" ");
-        // cs = {'h', 'e', 'l', 'l', 'o'}
-        // h:1 e:1 l:2 o:1
-        // h:1 e:1 l:1 l:1 o:1
-        for (String c : cs) {
-            context.write(new Text(c + ""), once);
+        // value = hello rose hello joy
+        // 拆分单词
+        String[] arr = value.toString().split(" ");
+        // 写出单词的次数
+        for (String s : arr) {
+            context.write(new Text(s), once);
         }
     }
 }
