@@ -21,12 +21,12 @@ public class HDFSDemo {
         // 准备配置对象
         Configuration conf = new Configuration();
         // 连接HDFS
-        FileSystem fs = FileSystem.get(URI.create("hdfs://10.9.162.133:9000"), conf);
+        FileSystem fs = FileSystem.get(URI.create("hdfs://10.42.98.181:9000"), conf);
         // 指定要下载的文件
         // 返回值是一个输入流
         FSDataInputStream in = fs.open(new Path("/a.txt"));
         // 准备输出流
-        FileOutputStream out = new FileOutputStream("D:/a.txt");
+        FileOutputStream out = new FileOutputStream("C:/test/a.txt");
         // 读取数据，将读取到的数据写出
         IOUtils.copyBytes(in, out, conf);
         // 关流
@@ -43,13 +43,13 @@ public class HDFSDemo {
         conf.set("dfs.replication", "4");
         conf.set("dfs.blocksize", "67108864");
         // 连接HDFS
-        FileSystem fs = FileSystem.get(URI.create("hdfs://10.9.162.133:9000"),
+        FileSystem fs = FileSystem.get(URI.create("hdfs://10.42.98.181:9000"),
                 conf, "root");
         // 指定存储位置
         // 获取到一个输出流
-        FSDataOutputStream out = fs.create(new Path("/a.xml"));
+        FSDataOutputStream out = fs.create(new Path("/b.txt"));
         // 准备输入流
-        FileInputStream in = new FileInputStream("D:/web.xml");
+        FileInputStream in = new FileInputStream("C:/test/b.txt");
         // 上传文件
         IOUtils.copyBytes(in, out, conf);
         // 关流
@@ -61,11 +61,11 @@ public class HDFSDemo {
     @Test
     public void delete() throws IOException, InterruptedException {
         Configuration conf = new Configuration();
-        FileSystem fs = FileSystem.get(URI.create("hdfs://10.9.162.133:9000"),
+        FileSystem fs = FileSystem.get(URI.create("hdfs://10.42.98.181:9000"),
                 conf, "root");
         // 删除文件
         // 第二个参数表示是否递归
-        fs.delete(new Path("/a.xml"), true);
+        fs.delete(new Path("/b.txt"), true);
     }
 
 }

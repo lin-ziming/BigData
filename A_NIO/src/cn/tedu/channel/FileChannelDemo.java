@@ -15,7 +15,7 @@ public class FileChannelDemo {
     public static void read() throws IOException {
         // 获取FileChannel对象
         // 因为这个FileChannel是通过FileInputStream获取的，所以这个Channel只能读取数据
-        FileChannel fc = new FileInputStream("D:\\a.txt").getChannel();
+        FileChannel fc = new FileInputStream("C:\\test\\a.txt").getChannel();
         // 准备缓冲区
         ByteBuffer buffer = ByteBuffer.allocate(1024);
         // 读取数据
@@ -28,7 +28,7 @@ public class FileChannelDemo {
 
     public static void write() throws IOException {
         // 获取FileChannel对象
-        FileChannel fc = new FileOutputStream("D:\\b.txt").getChannel();
+        FileChannel fc = new FileOutputStream("C:\\test\\b.txt").getChannel();
         // 写出数据
         fc.write(ByteBuffer.wrap("testing~~~".getBytes()));
         // 关流
@@ -41,7 +41,7 @@ public class FileChannelDemo {
         // "rwd" - 读写模式。允许以读写的形式将数据写出
         // 并且要求每一次的写出内容必须同步更新到底层的存储设备上
         // 在操作文件的时候，会将文件看作是一个大型的字节数组，因此可以通过下标来操作文件的任意位置
-        RandomAccessFile raf = new RandomAccessFile("D:\\c.txt", "rw");
+        RandomAccessFile raf = new RandomAccessFile("C:\\test\\c.txt", "rw");
         // 获取FileChannel
         FileChannel fc = raf.getChannel();
         ByteBuffer buffer = ByteBuffer.allocate(3);

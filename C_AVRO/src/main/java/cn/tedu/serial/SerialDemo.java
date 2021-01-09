@@ -96,7 +96,7 @@ public class SerialDemo {
         DataFileWriter<User> dfw = new DataFileWriter<>(dw);
         // 指定文件
         // dfw.create(u1.getSchema(), new File("D:/a.txt"));
-        dfw.create(User.SCHEMA$, new File("D:/a.txt"));
+        dfw.create(User.SCHEMA$, new File("C:/test/d.txt"));
         // 序列化
         dfw.append(u1);
         dfw.append(u2);
@@ -112,7 +112,7 @@ public class SerialDemo {
         DatumReader<User> dr = new SpecificDatumReader<>(User.class);
         // 构建文件流
         DataFileReader<User> dfr = new DataFileReader<>(
-                new File("D:/a.txt"), dr);
+                new File("C:/test/d.txt"), dr);
         // 为了方便获取多个对象，将这个流设计成了迭代模式
         while (dfr.hasNext()) {
             User u = dfr.next();

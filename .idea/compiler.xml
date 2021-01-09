@@ -8,15 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="C_AVRO" />
         <module name="E_HDFS" />
-        <module name="F_MapReduce01" />
         <module name="D_Zookeeper" />
+        <module name="F_MapReduce01" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="C_AVRO" target="1.8" />
-      <module name="D_Zookeeper" target="1.8" />
-      <module name="E_HDFS" target="1.8" />
-      <module name="F_MapReduce01" target="1.8" />
+      <module name="C_AVRO" target="8" />
+      <module name="D_Zookeeper" target="8" />
+      <module name="E_HDFS" target="8" />
+      <module name="F_MapReduce01" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
