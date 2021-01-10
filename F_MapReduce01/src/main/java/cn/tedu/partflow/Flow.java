@@ -1,4 +1,4 @@
-package cn.tedu.serialflow;
+package cn.tedu.partflow;
 
 import org.apache.hadoop.io.Writable;
 
@@ -44,15 +44,6 @@ public class Flow implements Writable {
         this.flow = flow;
     }
 
-    /**
-     * 序列化方法
-     * 在序列化的时候，只需要将有必要的属性来依次写出即可
-     * 有必要的属性 - 在实际生产过程中，一个类中可能会包含几十个属性
-     * 在实际生产过程中，收集信息的时候，秉持”多收集“原则
-     * 例如：在注册网址、APP的时候，会有必填和选填
-     * @param out
-     * @throws IOException
-     */
     @Override
     public void write(DataOutput out) throws IOException {
         out.writeUTF(phone);
@@ -61,12 +52,6 @@ public class Flow implements Writable {
         out.writeInt(flow);
     }
 
-    /**
-     * 反序列化方法
-     * 按照什么顺序往外写的，就按照什么顺序读回来
-     * @param in
-     * @throws IOException
-     */
     @Override
     public void readFields(DataInput in) throws IOException {
         this.phone = in.readUTF();
