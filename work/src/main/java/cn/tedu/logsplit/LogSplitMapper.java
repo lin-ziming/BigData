@@ -12,7 +12,7 @@ public class LogSplitMapper extends Mapper<LongWritable, Text,Log, NullWritable>
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String s = value.toString();
         Log log = new Log();
-        log.setIP(s.matches("[1-9]*[0-9]+"));
+
 
     }
 }

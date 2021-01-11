@@ -7,7 +7,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 
 import java.io.IOException;
 
-public class WordFileMapper extends Mapper<LongWritable, Text,Text,String> {
+public class WordFileMapper extends Mapper<LongWritable, Text,Text,Text> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String[] arr = value.toString().split(" ");
@@ -17,7 +17,7 @@ public class WordFileMapper extends Mapper<LongWritable, Text,Text,String> {
         FileSplit fs = (FileSplit) context.getInputSplit();
         String name = fs.getPath().getName();
         for (String word : arr) {
-            context.write(new Text(word),name);
+            context.write(new Text(word),new Text(name));
         }
     }
 }
