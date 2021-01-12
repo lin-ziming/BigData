@@ -71,7 +71,7 @@ class AuthReader extends RecordReader<Text,Text>{
      * @throws InterruptedException
      */
     @Override
-    public boolean nextKeyValue() throws IOException, InterruptedException {
+    public boolean nextKeyValue() throws IOException {
         // 准备变量
         key = new Text();
         value = new Text();
@@ -104,7 +104,7 @@ class AuthReader extends RecordReader<Text,Text>{
      * @throws InterruptedException
      */
     @Override
-    public Text getCurrentKey() throws IOException, InterruptedException {
+    public Text getCurrentKey() {
         return key;
     }
 
@@ -115,7 +115,7 @@ class AuthReader extends RecordReader<Text,Text>{
      * @throws InterruptedException
      */
     @Override
-    public Text getCurrentValue() throws IOException, InterruptedException {
+    public Text getCurrentValue() {
         return value;
     }
 
@@ -126,10 +126,14 @@ class AuthReader extends RecordReader<Text,Text>{
      * @throws InterruptedException
      */
     @Override
-    public float getProgress() throws IOException, InterruptedException {
+    public float getProgress() {
         return pos / len;
     }
 
+    /**
+     * 关流
+     * @throws IOException
+     */
     @Override
     public void close() throws IOException {
         if (reader != null) {

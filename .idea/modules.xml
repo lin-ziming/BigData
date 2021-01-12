@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/F_MapReduce01/F_MapReduce01.iml" filepath="$PROJECT_DIR$/F_MapReduce01/F_MapReduce01.iml" />
       <module fileurl="file://$PROJECT_DIR$/F_MapReduce02/mr02.iml" filepath="$PROJECT_DIR$/F_MapReduce02/mr02.iml" />
       <module fileurl="file://$PROJECT_DIR$/F_MapReduce03/F_MapReduce03.iml" filepath="$PROJECT_DIR$/F_MapReduce03/F_MapReduce03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F_MapReduce03/mr03.iml" filepath="$PROJECT_DIR$/F_MapReduce03/mr03.iml" />
       <module fileurl="file://$PROJECT_DIR$/work/work.iml" filepath="$PROJECT_DIR$/work/work.iml" />
     </modules>
   </component>

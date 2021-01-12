@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="work" />
+        <module name="mr03" />
         <module name="E_HDFS" />
         <module name="C_AVRO" />
         <module name="D_Zookeeper" />
@@ -16,13 +17,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="C_AVRO" target="1.8" />
-      <module name="D_Zookeeper" target="1.8" />
-      <module name="E_HDFS" target="1.8" />
-      <module name="F_MapReduce01" target="1.8" />
-      <module name="F_MapReduce02" target="1.8" />
+      <module name="C_AVRO" target="8" />
+      <module name="D_Zookeeper" target="8" />
+      <module name="E_HDFS" target="8" />
+      <module name="F_MapReduce01" target="8" />
+      <module name="F_MapReduce02" target="8" />
       <module name="F_MapReduce03" target="1.8" />
-      <module name="work" target="1.8" />
+      <module name="mr03" target="8" />
+      <module name="work" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
