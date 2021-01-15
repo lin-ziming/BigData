@@ -11,9 +11,10 @@
       <module fileurl="file://$PROJECT_DIR$/D_Zookeeper/D_Zookeeper.iml" filepath="$PROJECT_DIR$/D_Zookeeper/D_Zookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/E_HDFS/E_HDFS.iml" filepath="$PROJECT_DIR$/E_HDFS/E_HDFS.iml" />
       <module fileurl="file://$PROJECT_DIR$/F_MapReduce01/F_MapReduce01.iml" filepath="$PROJECT_DIR$/F_MapReduce01/F_MapReduce01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/F_MapReduce02/mr02.iml" filepath="$PROJECT_DIR$/F_MapReduce02/mr02.iml" />
       <module fileurl="file://$PROJECT_DIR$/F_MapReduce03/F_MapReduce03.iml" filepath="$PROJECT_DIR$/F_MapReduce03/F_MapReduce03.iml" />
       <module fileurl="file://$PROJECT_DIR$/F_MapReduce04/F_MapReduce04.iml" filepath="$PROJECT_DIR$/F_MapReduce04/F_MapReduce04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/G_Flume/G_Flume.iml" filepath="$PROJECT_DIR$/G_Flume/G_Flume.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F_MapReduce02/mr02.iml" filepath="$PROJECT_DIR$/F_MapReduce02/mr02.iml" />
       <module fileurl="file://$PROJECT_DIR$/work/work.iml" filepath="$PROJECT_DIR$/work/work.iml" />
     </modules>
   </component>

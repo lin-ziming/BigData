@@ -7,7 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="work" />
+        <module name="mr02" />
         <module name="E_HDFS" />
+        <module name="G_Flume" />
         <module name="C_AVRO" />
         <module name="D_Zookeeper" />
         <module name="F_MapReduce04" />
@@ -24,6 +26,8 @@
       <module name="F_MapReduce02" target="1.8" />
       <module name="F_MapReduce03" target="1.8" />
       <module name="F_MapReduce04" target="1.8" />
+      <module name="G_Flume" target="1.8" />
+      <module name="mr02" target="1.8" />
       <module name="work" target="1.8" />
     </bytecodeTargetLevel>
   </component>
