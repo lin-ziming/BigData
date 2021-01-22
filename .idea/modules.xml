@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/G_Flume/G_Flume.iml" filepath="$PROJECT_DIR$/G_Flume/G_Flume.iml" />
       <module fileurl="file://$PROJECT_DIR$/G_Flume02/G_Flume02.iml" filepath="$PROJECT_DIR$/G_Flume02/G_Flume02.iml" />
       <module fileurl="file://$PROJECT_DIR$/H_Hive/H_Hive.iml" filepath="$PROJECT_DIR$/H_Hive/H_Hive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/I_HBase/I_HBase.iml" filepath="$PROJECT_DIR$/I_HBase/I_HBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/F_MapReduce02/mr02.iml" filepath="$PROJECT_DIR$/F_MapReduce02/mr02.iml" />
       <module fileurl="file://$PROJECT_DIR$/work/work.iml" filepath="$PROJECT_DIR$/work/work.iml" />
     </modules>

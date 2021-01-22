@@ -7,15 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="work" />
-        <module name="G_Flume02" />
         <module name="mr02" />
+        <module name="I_HBase" />
         <module name="E_HDFS" />
         <module name="G_Flume" />
         <module name="C_AVRO" />
         <module name="D_Zookeeper" />
         <module name="H_Hive" />
-        <module name="F_MapReduce04" />
         <module name="F_MapReduce03" />
+        <module name="F_MapReduce04" />
+        <module name="G_Flume02" />
         <module name="F_MapReduce02" />
         <module name="F_MapReduce01" />
       </profile>
@@ -31,6 +32,7 @@
       <module name="G_Flume" target="1.8" />
       <module name="G_Flume02" target="1.8" />
       <module name="H_Hive" target="1.8" />
+      <module name="I_HBase" target="1.8" />
       <module name="mr02" target="1.8" />
       <module name="work" target="1.8" />
     </bytecodeTargetLevel>
