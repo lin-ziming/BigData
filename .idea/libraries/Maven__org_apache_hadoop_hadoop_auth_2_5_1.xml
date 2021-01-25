@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.apache.hadoop:hadoop-auth:2.5.1">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../maven/mavenRepository20201231/org/apache/hadoop/hadoop-auth/2.5.1/hadoop-auth-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../CGB2007/mavenRepository20200829/org/apache/hadoop/hadoop-auth/2.5.1/hadoop-auth-2.5.1.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../maven/mavenRepository20201231/org/apache/hadoop/hadoop-auth/2.5.1/hadoop-auth-2.5.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../CGB2007/mavenRepository20200829/org/apache/hadoop/hadoop-auth/2.5.1/hadoop-auth-2.5.1-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../maven/mavenRepository20201231/org/apache/hadoop/hadoop-auth/2.5.1/hadoop-auth-2.5.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../CGB2007/mavenRepository20200829/org/apache/hadoop/hadoop-auth/2.5.1/hadoop-auth-2.5.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

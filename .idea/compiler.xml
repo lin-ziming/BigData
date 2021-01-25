@@ -7,14 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="work" />
-        <module name="mr02" />
-        <module name="I_HBase" />
+        <module name="F_MapReduce03" />
         <module name="E_HDFS" />
         <module name="G_Flume" />
         <module name="C_AVRO" />
         <module name="D_Zookeeper" />
+        <module name="I_HBase" />
         <module name="H_Hive" />
-        <module name="F_MapReduce03" />
         <module name="F_MapReduce04" />
         <module name="G_Flume02" />
         <module name="F_MapReduce02" />
@@ -22,19 +21,18 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="C_AVRO" target="1.8" />
-      <module name="D_Zookeeper" target="1.8" />
-      <module name="E_HDFS" target="1.8" />
-      <module name="F_MapReduce01" target="1.8" />
-      <module name="F_MapReduce02" target="1.8" />
-      <module name="F_MapReduce03" target="1.8" />
-      <module name="F_MapReduce04" target="1.8" />
-      <module name="G_Flume" target="1.8" />
-      <module name="G_Flume02" target="1.8" />
-      <module name="H_Hive" target="1.8" />
-      <module name="I_HBase" target="1.8" />
-      <module name="mr02" target="1.8" />
-      <module name="work" target="1.8" />
+      <module name="C_AVRO" target="8" />
+      <module name="D_Zookeeper" target="8" />
+      <module name="E_HDFS" target="8" />
+      <module name="F_MapReduce01" target="8" />
+      <module name="F_MapReduce02" target="8" />
+      <module name="F_MapReduce03" target="8" />
+      <module name="F_MapReduce04" target="8" />
+      <module name="G_Flume" target="8" />
+      <module name="G_Flume02" target="8" />
+      <module name="H_Hive" target="8" />
+      <module name="I_HBase" target="8" />
+      <module name="work" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

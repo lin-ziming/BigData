@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="Maven: org.apache.hadoop:hadoop-mapreduce-client-core:2.7.5">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../maven/mavenRepository20201231/org/apache/hadoop/hadoop-mapreduce-client-core/2.7.5/hadoop-mapreduce-client-core-2.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../CGB2007/mavenRepository20200829/org/apache/hadoop/hadoop-mapreduce-client-core/2.7.5/hadoop-mapreduce-client-core-2.7.5.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../maven/mavenRepository20201231/org/apache/hadoop/hadoop-mapreduce-client-core/2.7.5/hadoop-mapreduce-client-core-2.7.5-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../CGB2007/mavenRepository20200829/org/apache/hadoop/hadoop-mapreduce-client-core/2.7.5/hadoop-mapreduce-client-core-2.7.5-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../../maven/mavenRepository20201231/org/apache/hadoop/hadoop-2.7.5-src/hadoop-common-project/hadoop-annotations/src/main/java" />
@@ -96,7 +96,7 @@
       <root url="file://$PROJECT_DIR$/../../maven/mavenRepository20201231/org/apache/hadoop/hadoop-2.7.5-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-tests/src/test/java" />
       <root url="file://$PROJECT_DIR$/../../maven/mavenRepository20201231/org/apache/hadoop/hadoop-2.7.5-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-web-proxy/src/main/java" />
       <root url="file://$PROJECT_DIR$/../../maven/mavenRepository20201231/org/apache/hadoop/hadoop-2.7.5-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-web-proxy/src/test/java" />
-      <root url="jar://$PROJECT_DIR$/../../maven/mavenRepository20201231/org/apache/hadoop/hadoop-mapreduce-client-core/2.7.5/hadoop-mapreduce-client-core-2.7.5-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../CGB2007/mavenRepository20200829/org/apache/hadoop/hadoop-mapreduce-client-core/2.7.5/hadoop-mapreduce-client-core-2.7.5-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
