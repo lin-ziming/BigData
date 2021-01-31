@@ -6,14 +6,15 @@ import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
+import org.apache.hadoop.hbase.filter.CompareFilter;
+import org.apache.hadoop.hbase.filter.Filter;
+import org.apache.hadoop.hbase.filter.RegexStringComparator;
+import org.apache.hadoop.hbase.filter.ValueFilter;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.NavigableMap;
+import java.util.*;
 
 public class HBaseDemo {
 
@@ -176,6 +177,87 @@ public class HBaseDemo {
         System.err.println(new String(r.getValue("basic".getBytes(),"name".getBytes())));
         // 关流
         table.close();
+    }
+    /**
+     * 删除
+     */
+    @Test
+    public void delete() throws IOException {
+        HTable table = new HTable(conf,"users");
+        // 构建Delete对象
+        // 删除指定的列
+        // Delete del = new Delete("u1".getBytes());
+        // del.addColumn("info".getBytes(),"addr".getBytes() );
+        // 删除指定的列族
+        // Delete del = new Delete("u1".getBytes());
+        // del.addFamily("basic".getBytes());
+        // 删除一行数据
+        Delete del = new Delete("u1".getBytes());
+        // 删除数据
+        table.delete(del);
+        // 关流
+        table.close();
+    }
+    /**
+     * 扫描
+     */
+    @Test
+    public void scan() throws IOException {
+        HTable table = new HTable(conf,"users");
+        // 构建Scan对象
+        // 遍历所有数据
+        // Scan scan = new Scan();
+        // 从指定的行键位置开始遍历
+        // Scan scan = new Scan("u9".getBytes());
+        // 指定遍历范围
+        Scan scan = new Scan("u8".getBytes(),"u9".getBytes());
+        // 返回值是查询的结果集
+        ResultScanner rs = table.getScanner(scan);
+        byte[] f = "basic".getBytes();
+        byte[] c = "password".getBytes();
+        // 遍历结果集
+        for (Result r : rs) {
+            System.err.println(new String(r.getValue(f,c)));
+        }
+        // 关流
+        table.close();
+    }
+    /**
+     * 过滤
+     */
+    @Test
+    public void filter() throws IOException {
+        HTable table = new HTable(conf,"users");
+        Scan scan = new Scan();
+        // 构建过滤器
+        // 过滤值中出现"AAA"的数据
+        Filter filter = new ValueFilter(CompareFilter.CompareOp.EQUAL,
+                new RegexStringComparator(".*AAA.*"));
+        // 设置过滤器
+        scan.setFilter(filter);
+        byte[] f = "basic".getBytes();
+        byte[] c = "password".getBytes();
+        ResultScanner rs = table.getScanner(scan);
+        Iterator<Result> it = rs.iterator();
+        while(it.hasNext()){
+            Result r = it.next();
+            System.err.println(new String(r.getValue(f,c)));
+        }
+        table.close();
+    }
+    /**
+     * 删表
+     */
+    @Test
+    public void dropTable() throws IOException {
+        // 获取管理权
+        HBaseAdmin admin = new HBaseAdmin(conf);
+        // 禁用表
+        admin.disableTable("users");
+        // 删除表
+        admin.deleteTable("users");
+        // 关流
+        admin.close();
     }
 
 }
